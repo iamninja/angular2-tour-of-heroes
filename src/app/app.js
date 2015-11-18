@@ -10,6 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require('angular2/angular2');
+var Hero = (function () {
+    function Hero() {
+    }
+    return Hero;
+})();
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Tour of Heroes';
@@ -21,16 +26,12 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         angular2_1.Component({
             selector: 'my-app',
-            template: "\n\t\t<h1>{{ title }}</h1>\n\t\t<h2>{{ hero.name }} details!</h2>\n\t\t<div><label>id: </label>{{ hero.id }}</div>\n\t\t<div><label>name: </label>{{ hero.name }}</div>\n\t\t"
+            directives: [angular2_1.FORM_DIRECTIVES],
+            template: "\n\t\t<h1>{{ title }}</h1>\n\t\t<h2>{{ hero.name }} details!</h2>\n\t\t<div><label>id: </label>{{ hero.id }}</div>\n\t\t<div>\n\t\t\t<label>name: </label>\n\t\t\t<div><input [(ng-model)]=\"hero.name\" placeholder=\"name\"></div>\n\t\t</div>\n\t\t"
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;
-})();
-var Hero = (function () {
-    function Hero() {
-    }
-    return Hero;
 })();
 angular2_1.bootstrap(AppComponent);
 //# sourceMappingURL=app.js.map
