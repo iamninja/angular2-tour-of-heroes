@@ -13,16 +13,24 @@ var angular2_1 = require('angular2/angular2');
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Tour of Heroes';
-        this.hero = 'Windstorm';
+        this.hero = {
+            id: 1,
+            name: 'Windstorm'
+        };
     }
     AppComponent = __decorate([
         angular2_1.Component({
             selector: 'my-app',
-            template: '<h1>{{ title }}</h1><h2>{{ hero }} details!</h2>'
+            template: "\n\t\t<h1>{{ title }}</h1>\n\t\t<h2>{{ hero.name }} details!</h2>\n\t\t<div><label>id: </label>{{ hero.id }}</div>\n\t\t<div><label>name: </label>{{ hero.name }}</div>\n\t\t"
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;
+})();
+var Hero = (function () {
+    function Hero() {
+    }
+    return Hero;
 })();
 angular2_1.bootstrap(AppComponent);
 //# sourceMappingURL=app.js.map
