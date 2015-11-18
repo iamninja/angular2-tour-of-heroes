@@ -1,0 +1,31 @@
+{
+  "name": "angular2-quickstart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc -p src -w",
+    "start": "live-server --open=src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamninja/angular2-quickstart-tutorial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamninja/angular2-quickstart-tutorial/issues"
+  },
+  "homepage": "https://github.com/iamninja/angular2-quickstart-tutorial#readme",
+  "dependencies": {
+    "angular2": "2.0.0-alpha.44",
+    "es5-shim": "^4.3.1",
+    "es6-shim": "^0.33.13",
+    "systemjs": "0.19.2"
+  },
+  "devDependencies": {
+    "live-server": "^0.8.2",
+    "typescript": "^1.6.2"
+  }
+}
