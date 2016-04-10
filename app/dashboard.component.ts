@@ -1,4 +1,5 @@
 import { Component, OnInit }    from 'angular2/core';
+import { Router }                     from 'angular2/router';
 import { Hero }                 from './hero';
 import { HeroService }          from './hero.service';
 
@@ -12,7 +13,10 @@ import { HeroService }          from './hero.service';
 export class DashboardComponent implements OnInit{
     heroes: Hero[] = [];
     
-    constructor(private _heroService: HeroService) {
+    constructor(
+        private _heroService: HeroService,
+        private _router: Router    
+    ) {
         
     }
     
@@ -22,6 +26,7 @@ export class DashboardComponent implements OnInit{
     }
     
     gotoDetail() {
-        
+        let link = ['HeroDetail', { id: Hero.id }];
+        this._router.navigate(link);
     }
 }
